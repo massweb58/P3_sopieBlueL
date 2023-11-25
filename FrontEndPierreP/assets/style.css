@@ -1,0 +1,778 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/** end reset css**/
+body {
+	max-width: 1140px;
+	margin: auto;
+	font-family: 'Work Sans';
+	font-size: 14px;
+}
+
+.nav__bar {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0
+}
+
+section {
+	margin: 50px 0
+}
+
+h1 {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+
+h1>span {
+	font-family: 'Work Sans';
+	font-size: 10px;
+	letter-spacing: 0.1em;
+}
+
+h2 {
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154
+}
+
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+}
+
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+li:hover {
+	color: #B1663C;
+	cursor: pointer;
+}
+
+#introduction {
+	display: flex;
+	align-items: center;
+}
+
+#introduction figure {
+	flex: 1
+}
+
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+
+#introduction article {
+	flex: 1
+}
+
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.gallery img {
+	width: 100%;
+}
+
+#contact {
+	width: 50%;
+	margin: auto;
+}
+
+#contact>* {
+	text-align: center;
+}
+
+#contact h2 {
+	margin-bottom: 20px;
+}
+
+#contact form {
+	text-align: left;
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#contact label {
+	margin: 2em 0 1em 0;
+}
+
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+input[type="submit"] {
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin: 2em auto;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px;
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em
+}
+
+/**************************************************************************************/
+/****************************** Ajout sur le projet ***********************************/
+/**************************************************************************************/
+
+* {
+	box-sizing: border-box;
+}
+
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+/* partie mode edition du header */
+
+.header__index {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.header__login {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0;
+}
+
+.edition__box {
+	background-color: black;
+	color: white;
+	height: 59px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Work Sans;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	gap: 27px;
+}
+
+/* partie login */
+
+.log-in {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 50%;
+	margin: auto;
+}
+
+.log-in label {
+	margin: 2em 0 1em 0;
+}
+
+.log-in form {
+	text-align: left;
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.log-in input,
+.modal-wrapper input,
+select {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+
+}
+
+.log-in h2 {
+	margin-bottom: 20px;
+
+}
+
+.log-in p {
+	text-decoration: underline;
+}
+
+.log-in p:hover {
+	cursor: pointer;
+	color: #B1663C;
+}
+
+.login__bold {
+	font-weight: bold;
+}
+
+.submit__btn:hover,
+.connect__btn:hover,
+.addpicture__btn:hover,
+.validate__btn:hover {
+	cursor: pointer;
+}
+
+/* parie boutons de filtrage */
+
+.filter__bar {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	padding-bottom: 50px;
+}
+
+.filter__btn {
+	display: flex;
+	height: 37px;
+	border: 1px solid #1D6154;
+	border-radius: 60px;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	padding: 10px 30px 9px 30px;
+	color: #1D6154;
+	background-color: white;
+}
+
+.filter__btn:hover {
+	cursor: pointer;
+
+}
+
+.filter__btn--selected {
+
+	background-color: #1D6154;
+	color: white;
+}
+
+
+/*  PARTIE CSS PAGE MODALE  */
+
+.project__bar {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+}
+
+.project__bar h2 {
+	text-align: center;
+
+}
+
+.js__modal {
+	display: flex;
+	gap: 10px;
+}
+
+.js__modal:hover {
+	cursor: pointer;
+	color: #B1663C;
+}
+
+.modal {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.80);
+	animation: fadeIn 300ms both;
+	z-index: 1000;
+}
+
+
+
+
+.modal-wrapper {
+
+	overflow: auto;
+	width: 600px;
+	height: 700px;
+	padding-top: 20px;
+	max-width: calc(100vw - 20px);
+	max-height: calc(100vh - 20px);
+
+	background-color: #fff;
+	border-radius: 10px;
+
+}
+
+.modal__addpictures,
+.modal__gallery {
+	height: 100%
+}
+
+.modal__title--class,
+.confirm__box span {
+	color: #000;
+	text-align: center;
+	font-family: Work Sans;
+	font-size: 26px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	padding-top: 25px;
+
+}
+
+.body__modal {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 105px 0 105px;
+}
+
+.gallery__modal {
+	width: 100%;
+	padding-top: 25px;
+	padding-bottom: 50px;
+}
+
+.modal__gallery {
+	position: relative;
+}
+
+.confirm__box {
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-color: #1D6154;
+	border: solid 1px;
+	border-radius: 10px;
+	background-color: white;
+
+	padding-bottom: 25px;
+}
+
+.confirm__box {
+	padding-top: 25px;
+}
+
+.confirm__btnclose {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+}
+
+
+.confirm__barbtns {
+	display: flex;
+	justify-content: space-between;
+	gap: 50px;
+}
+
+.confirm__barbtns button {
+	height: 36px;
+	width: 75px;
+	text-align: center;
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	border: none;
+	border-radius: 60px;
+	color: white;
+	margin-bottom: 45px;
+	margin-top: 38px;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	flex-shrink: 0;
+	background-color: #a7a7a7;
+}
+
+.confirm__yes:hover {
+	cursor: pointer;
+	background-color: #1D6154;
+}
+
+.confirm__no:hover {
+	cursor: pointer;
+	background-color: #1D6154;
+}
+
+.addpictures__modal {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 100%;
+	padding-top: 25px;
+	padding-bottom: 50px;
+
+}
+
+.addpictures__modal form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+
+}
+
+.addpicture__btn,
+.validate__btn {
+	width: 237px;
+	height: 36px;
+	text-align: center;
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	border: none;
+	border-radius: 60px;
+	color: white;
+	margin-bottom: 45px;
+	margin-top: 38px;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	flex-shrink: 0;
+}
+
+.addpicture__btn {
+	background-color: #1D6154;
+}
+
+.validate__btn {
+	background-color: #a7a7a7;
+}
+
+.validate__btn--ok {
+	background-color: #1D6154;
+}
+
+.btnbar__modal {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.modal__gallery .btnbar__modal {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.js-modal-close,
+.js-modal-close-2,
+.return__btn,
+.confirm__btnclose {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	font-size: inherit;
+}
+
+.js-modal-close i,
+.js-modal-close-2 i,
+.return__btn i,
+.confirm__btnclose i {
+	font-size: 24px;
+}
+
+.pictures__modal {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-column-gap: 10px;
+	grid-row-gap: 30px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.picture__modal {
+	width: 100%;
+	position: relative;
+}
+
+.picture__modal img {
+	width: 100%;
+	object-fit: cover;
+
+}
+
+.addpictures__modal,
+.gallery__modal,
+.pictures__modal {
+	border-bottom: solid 1px #b3b3b3;
+}
+
+.trashbox__modal {
+	height: 17px;
+	width: 17px;
+	border-radius: 2px;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.trashbox__modal:hover {
+	cursor: pointer;
+}
+
+.trashbox__modal .fa-trash-can {
+	color: white;
+	font-size: 10px;
+}
+
+.inputfile__box {
+	height: 169px;
+	width: 100%;
+	background-color: #e8f1f6;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.input__figure {
+	height: 100%;
+	object-fit: cover;
+}
+
+.fa-image {
+	color: #b9c5cc;
+	font-size: 75px;
+}
+
+.inputfile__btn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 36px;
+	width: 40%;
+	border-radius: 50px;
+	background-color: #b9c5cc;
+	color: #306685;
+}
+
+.inputfile__box span {
+	font-size: 10px;
+}
+
+.inputfile__box:hover {
+	cursor: pointer;
+}
+
+.input__file {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+
+.error-message {
+
+	color: #FF0000;
+	font-size: 14px;
+
+}
+
+.display--none {
+	display: none;
+}

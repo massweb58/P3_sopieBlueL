@@ -1,0 +1,379 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  background-color: #fefef8;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+section {
+  margin: 50px 0;
+}
+
+h2 {
+  font-family: "Syne";
+  font-weight: 700;
+  font-size: 30px;
+  color: #1d6154;
+}
+
+body {
+  max-width: 1140px;
+  margin: auto;
+  font-family: "Work Sans";
+  font-size: 14px;
+}
+
+/** end reset css**/
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+header h1 {
+  display: flex;
+  flex-direction: column;
+  font-family: "Syne";
+  font-size: 22px;
+  font-weight: 800;
+  color: #b1663c;
+}
+header h1 span {
+  font-family: "Work Sans";
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+header nav ul li {
+  padding: 0 10px;
+  font-size: 1.2em;
+}
+header nav ul li img {
+  height: 20px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+header nav ul li a:hover {
+  color: #b1663c;
+}
+header nav ul li:hover {
+  color: #b1663c;
+}
+
+/****section contact formulaire********/
+#contact {
+  width: 50%;
+  margin: auto;
+}
+#contact > * {
+  text-align: center;
+}
+#contact h2 {
+  margin-bottom: 20px;
+}
+#contact form {
+  text-align: left;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+#contact form input {
+  height: 50px;
+  font-size: 1.2em;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact form label {
+  margin: 2em 0 1em 0;
+  font-weight: 700;
+}
+#contact form textarea {
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact form input[type=submit] {
+  font-family: "Syne";
+  font-weight: 700;
+  color: white;
+  background-color: #1d6154;
+  margin: 2em auto;
+  width: 180px;
+  text-align: center;
+  border-radius: 60px;
+  cursor: pointer;
+}
+
+#introduction {
+  display: flex;
+  align-items: center;
+  margin-bottom: 140px;
+}
+#introduction figure {
+  flex: 1;
+}
+#introduction figure img {
+  display: block;
+  width: 80%;
+}
+#introduction article {
+  flex: 1;
+}
+#introduction article h2 {
+  margin-bottom: 1em;
+}
+#introduction article p {
+  margin-bottom: 0.5em;
+}
+
+#portfolio {
+  /*Préparation des filtres*/
+}
+#portfolio h2 {
+  text-align: center;
+}
+#portfolio .container-filtres {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  height: 100px;
+}
+#portfolio .container-filtres .buttons-filtres {
+  background-color: #fefef8;
+  padding: 9px 20px;
+  border: 1px solid #1d6154;
+  border-radius: 25px;
+  color: #1d6154;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: Syne;
+  cursor: pointer;
+}
+#portfolio .container-filtres .active {
+  background-color: #1d6154;
+  color: white;
+}
+#portfolio .gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+#portfolio .gallery img {
+  width: 100%;
+}
+
+/****************Utilisateur conectée****************/
+.div-edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5em;
+  gap: 10px;
+}
+.div-edit span {
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #ffffff;
+}
+footer nav ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2em;
+}
+
+/******************Page login************************/
+/*lien Mot de passe oublié du form de conexion*/
+.main-login {
+  height: 750px;
+}
+
+.form__lien {
+  color: black;
+  font-weight: 700;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.errorLogin {
+  color: #ff0000;
+}
+
+#login-link {
+  cursor: pointer;
+}
+
+/*Mode admin editeur*/
+.admin-edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 50px;
+}
+.admin-edit p {
+  color: white;
+}
+
+#modalContent {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalPortfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  border-radius: 5px;
+  width: 35%;
+  position: relative;
+}
+.modalPortfolio span {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.modalPortfolio span .fa-xmark {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.modalPortfolio h2 {
+  margin-top: 50px;
+  color: black;
+  font-size: 26px;
+  font-family: Work Sans;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+.modalPortfolio .modalGallery {
+  width: 65%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+  margin-bottom: 60px;
+}
+.modalPortfolio .modalGallery figure {
+  width: 100%;
+  position: relative;
+}
+.modalPortfolio .modalGallery figure span {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: black;
+  height: 18px;
+  width: 18px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.modalPortfolio .modalGallery figure span .fa-trash-can {
+  color: white;
+  font-size: 0.6rem;
+}
+.modalPortfolio .modalGallery img {
+  width: 100%;
+  height: 100%;
+}
+
+.container-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 65%;
+  border-top: 1px solid gray;
+}
+.container-button .buttons {
+  background-color: #1d6154;
+  padding: 9px 50px;
+  border-radius: 25px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: Syne;
+  cursor: pointer;
+}
+.container-button .buttons:hover {
+  background-color: white;
+  border: 1px solid #1d6154;
+  color: #1d6154;
+}
+
+/*# sourceMappingURL=style.css.map */

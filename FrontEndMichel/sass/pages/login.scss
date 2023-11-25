@@ -1,0 +1,30 @@
+/******************Page login************************/
+/*lien Mot de passe oublié du form de conexion*/
+.main-login {
+  height: 750px;
+}
+.form__lien {
+  color: black;
+  font-weight: 700;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+.errorLogin {
+  color: #ff0000;
+}
+#login-link {
+  cursor: pointer;
+}
+/*Mode admin editeur*/
+.admin-edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 50px;
+  p {
+    color: white;
+  }
+}

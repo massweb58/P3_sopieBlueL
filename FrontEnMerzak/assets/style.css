@@ -1,0 +1,525 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/** end reset css**/
+body {
+	max-width: 1140px;
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+    background-color: #FFFEF8;;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0
+}
+section {
+	margin: 50px 0
+}
+
+h1{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+
+h1 > span {
+	font-family: 'Work Sans';
+	font-size:10px;
+	letter-spacing: 0.1em;
+;
+}
+
+h2{
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+
+}
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+li:hover {
+	color: #B1663C;
+}
+#introduction {
+	display: flex;
+	align-items: center;
+}
+#introduction figure {
+	flex: 1
+}
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+
+#introduction article {
+	flex: 1
+}
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+#portfolio h2 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.gallery img {
+	width: 100%;
+    height: 26.875rem;
+}
+#contact {
+	width: 50%;
+    margin: auto;
+}
+#contact > * {
+	text-align: center;
+}
+#contact h2{
+	margin-bottom: 20px;
+}
+#contact form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+	margin: 2em 0 1em 0;
+}
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+input[type="submit"]{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em
+}
+
+/********************************************************************/
+/* CODE AJOUTE*/
+/*********************************************************************/
+/* btn catégorie*/
+#btns-categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.6rem;
+    margin: 3.19rem;
+}
+
+.btn-category-filter {
+    color: #1D6154;
+    text-align: center;
+    font-family: Syne;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 3.75rem;
+    border: 1px solid #1D6154;
+    background-color: #fff;
+    padding: 0.59rem 0.88rem;
+    min-width: 6.25rem;
+}
+
+ .btn-category-selected{
+   color: #fff;
+    background-color: #1D6154;
+} 
+
+/* erreur*/
+.alertError {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    width: 100%;;
+    color: red;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+
+/************************** EDITION MODE ****************************/
+/* Login*/
+nav a {
+    text-decoration: none;
+    color: #000;
+}
+nav a:hover {
+	color: #B1663C;
+}
+.active {
+    font-weight: 600;
+}
+
+.banner-edit {
+    width: 100%;
+    height: 3.6875rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-pen-to-square{
+    margin-right: 0.5rem;
+}
+
+.edit-project{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.edit{
+    color: #000;
+    font-size: 0.875rem;
+    margin-left: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/*********************************************************************/
+/*Modale*/
+/*********************************************************************/
+.active{
+    display: flex !important;
+}
+.desactive{
+    display: none !important;
+}
+.modal {
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.30);
+}
+.modal-wrapper{
+    background-color: #fff;
+    color: #000;
+    overflow: auto;
+    margin-top: 2rem;
+    margin-left: 27%;
+    margin-right: 27%;
+    min-width: 40rem;
+    border-radius: 0.625rem;
+}
+.modal-wrapper-item{
+    margin: 0;
+}
+#modal-delete{
+    font-size: 1rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+.modal-wrapper-gallery{
+    justify-content: center;
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-column-gap: 0.3rem;
+	grid-row-gap: 1.5rem;
+    width: 27rem;
+}
+.img-container{
+    position: relative;
+}
+.fa-trash-can{
+    background: #000;
+    color: #fff;
+    font-size: 0.6rem;
+    padding: 0.2rem;
+    flex-shrink: 0;
+    position: absolute;
+    right: 0.4rem;
+    top: 0.25rem;
+    cursor: pointer;
+}
+.modal-wrapper-gallery img {
+    width: 4.92994rem;
+    height: 6.58375rem;
+    flex-shrink: 0;
+}
+.modal-wrapper-exit{
+    align-self: flex-end;  
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.modal-wrapper-title{
+    color: #000;
+    text-align: center;
+    font-family: "Work Sans";
+    font-size: 1.625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+hr{
+    width: 26.25rem;
+    height: 0.0625rem;
+    background: #B3B3B3;
+}
+
+.btn-add-work{
+    width: 14.8125rem;
+    height: 2.25rem;
+    flex-shrink: 0;
+    border-radius: 3.75rem;
+    background: #1D6154;
+    color: #fff;
+    text-align: center;
+    font-family: "Syne";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: none;
+}
+
+/* Formulaire ajout photo */
+#modal-add{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+.form-mask{
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: relative;
+    width: 100%;
+}
+.form--mask-back{
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+}
+.form-mask-exit{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+.modal-form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 26rem;
+}
+input[type="file"] {
+    display: none;
+}
+  
+.custom-upload-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.44rem;
+    height: 10.5625rem;
+    width: 100%;
+    border-radius: 0.1875rem;
+    background: #E8F1F6;
+    color:#B9C5CC;
+    border: none;
+    cursor: pointer;
+}
+
+.fa-image{
+    width: 4.75rem;
+    height: 4.75rem;
+    font-size: 4.75rem;
+    color: #B9C5CC;
+}
+.add-img-btn{
+    width: 10.8125rem;
+    height: 2.25rem;
+    border-radius: 3.125rem;
+    background: #CBD6DC;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    color: #306685;
+    text-align: center;
+    font-family: "Work Sans";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.limit{
+    color: #444;
+    text-align: center;
+    font-family: "Work Sans";
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.img-miniature {
+    object-fit: cover;
+    width: 8.0625rem;
+    height: 12.0625rem;
+}
+.file-container  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.1875rem;
+    
+}
+.btn-replace-file{
+    display: none;
+    background-color: red;
+    font-size: 0.7rem;
+    color: #fff;
+    text-align: center;
+    padding: 0.2rem;
+    cursor: pointer;
+}
+.form-input{
+    width: auto;
+    height: 3.1875rem;
+    background: #FFF;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+    border: none;
+}
+input[type="text"], select {
+    color: #444;
+    font-family: "Work Sans";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0 0.5rem;
+}
+.btn-valid{
+    width: 14.8125rem;
+    height: 2.25rem;
+    flex-shrink: 0;
+    border-radius: 3.75rem;
+    background: #A7A7A7;
+    color: #fff;
+    text-align: center;
+    font-family: "Syne";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: none;
+    margin-bottom: 3rem;
+    align-self: center;
+}
+.btn-valid-active{
+    background: #1D6154 !important;
+}
+.add-error-message{
+    color: red;
+    font-size: 0.8rem;
+}

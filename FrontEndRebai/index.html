@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Sophie Bluel - Architecte d'intérieur</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+		rel="stylesheet">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="./assets/style.css">
+	<script src="https://kit.fontawesome.com/ab56c9c6ec.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div id="barre_utilisateur" class="hiddenAdmin">
+		<button class="edition">
+			<i class="fa-solid fa-pen-to-square"></i>
+			Mode édition
+		</button>
+		<button class="changements">
+			publier les changements
+		</button>
+	</div>
+
+	<section id="contenu_modal" class="contenu_modal modal">
+
+
+		<div class="galerie_modale">
+			<div class="overlay modal-trigger"></div>
+			<div id="modal">
+				<button aria-label="close modal" class="close-modal modal-trigger">X</button>
+				<div class="align_modal">
+					<h2>Galerie photo </h2>
+
+					<div class="galleryModale"></div>
+
+					<div class="contenu_btn_modal">
+						<hr class="bar">
+						<button class="ajoutphoto modal-trigger">Ajouter une photo</button>
+						<button class="supprimerphoto">Supprimer la galerie</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="contenu-modal2 modal">
+		<div class="overlay modal-trigger2"></div>
+		<div class="modal2">
+			<div class="alignement">
+				<i class="fa-solid fa-arrow-left retourner"></i>
+				<button aria-label="close modal" class="close-modal modal-trigger2">X</button>
+			</div>
+			<h2>Ajout photo</h2>
+
+			<form id="photoForm" enctype="multipart/form-data">
+				<div class="ajout_fichier">
+					<img src="assets/icons/img-icon.svg" alt="icon_img">
+					<div class="contenu_btn_form">
+						<label for="image" class="photo-upload-button"> + Ajouter photo</label>
+						<input id="image" name="image" type="file" accept=".png, .jpg, .jpeg" />
+						<p class="type-files">jpg, png : 4mo max</p>
+					</div>
+				</div>
+				
+				<label class="text-css" for="title">Titre</label>
+				<input type="text" name="title" id="title" required />
+				<label class="text-css" for="category">Categorie</label>
+				<select type="select" name="category" id="category" required>
+					<option value="">veuillez sélectionner une catégorie</option>
+
+				</select>
+				<hr class="bar"/>
+				<input class="btn-submit" type="submit" value="valider"/>
+				<button class="close-photo" style="display: none;">X</button>
+				<i class="fa-regular fa-image" id="preview" style="display:block;"></i>
+				<img id="prev-img" src="#" alt="your image" style="display: none;"/>
+			</form>
+			
+		</div>
+	</section>
+	<header>
+		<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
+		<nav>
+			<ul>
+
+				<li><a href="#"> projets </a></li>
+				<li><a href="#contact"> contact </a></li>
+				<li> <a class="login" href="login.html"> login </a> </li>
+				<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="introduction">
+			<figure>
+				<img src="./assets/images/sophie-bluel.png" alt="">
+				<button class="btn_modal hiddenAdmin"> <i class="fa-solid fa-pen-to-square "></i> modifier</button>
+			</figure>
+			<article>
+				<h2>Designer d'espace</h2>
+				<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison
+					finale du chantier.</p>
+				<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les
+					couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du
+					chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+				<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG,
+					décorateur(trice)</p>
+			</article>
+		</section>
+		<section id="portfolio">
+			<div class="align_btn">
+				<h2>Mes Projets</h2>
+				<button class="btn_modal modal-trigger hiddenAdmin"> <i class="fa-solid fa-pen-to-square"></i>
+					modifier</button>
+			</div>
+			<div id="filters" class="filtres">
+				<button class="is-active btn_filter">Tous</button>
+			</div>
+			<div class="gallery"></div>
+		</section>
+		<section id="contact">
+			<h2>Contact</h2>
+			<p>Vous avez un prjet ? Discutons-en !</p>
+			<form action="#" method="post">
+				<label for="name">Nom</label>
+				<input type="text" name="name" id="name">
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email">
+				<label for="message">Message</label>
+				<textarea name="message" id="message" cols="30" rows="10"></textarea>
+				<input type="submit" value="Envoyer">
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<nav>
+			<ul>
+				<li>Mentions Légales</li>
+			</ul>
+		</nav>
+	</footer>
+	<script src="./assets/index.js"></script>
+</body>
+
+</html>

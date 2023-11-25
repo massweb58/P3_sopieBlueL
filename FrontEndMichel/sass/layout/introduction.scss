@@ -1,0 +1,24 @@
+//----------------------------------
+//Section introduction
+//----------------------------------
+#introduction {
+  display: flex;
+  align-items: center;
+  margin-bottom: 140px;
+  figure {
+    flex: 1;
+    img {
+      display: block;
+      width: 80%;
+    }
+  }
+  article {
+    flex: 1;
+    h2 {
+      margin-bottom: 1em;
+    }
+    p {
+      margin-bottom: 0.5em;
+    }
+  }
+}

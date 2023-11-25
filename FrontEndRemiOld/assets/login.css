@@ -1,0 +1,114 @@
+/*annulation de la valeur max précédente et important pour la priorité surpasse le style.css*/
+body {
+    max-width: unset !important;
+}
+
+header,
+main {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.container {
+    background-color: #fffef8;
+}
+
+#login__header {
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.login__section {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0 250px 0px;
+    margin: 0;
+}
+
+.login__section h1 {
+    font-family: Syne;
+    font-weight: 700;
+    font-size: 30px;
+    align-items: center;
+    color: #1D6154;
+}
+
+.login__section form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
+
+.login-form__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__form label {
+    color: #3D3D3D;
+    font-family: Work Sans;
+    letter-spacing: 0em;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.login__form input {
+    height: 51px;
+    width: 379px;
+    left: 530px;
+    top: 338px;
+    box-shadow: 0px 4px 14px 0px #00000017;
+    border: transparent;
+    border-radius: 0px;
+    margin-top: 2%;
+    margin-bottom: 7%;
+}
+
+.login__form button {
+    height: 36px;
+    width: 179px;
+    border-radius: 60px;
+    color: white;
+    background-color: #1D6154;
+}
+
+.login__form button:hover {
+    cursor: pointer;
+}
+
+.login__form a {
+    color: #3D3D3D;
+    font-family: Work Sans;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+}
+
+nav li {
+	padding-left: 50px;
+	font-size: 1.2em;
+}
+
+li a {
+	text-decoration: none;
+	color: black;
+}
+
+li a:hover {
+	color: black;
+	font-weight: 700;
+}
+
+.insta-icon {
+	width: 20px;
+	height: 20px;
+}
